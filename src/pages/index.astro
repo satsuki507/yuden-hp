@@ -1,11 +1,203 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WorksModal from '../components/WorksModal.jsx'; // Reactをインポート
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="優伸電設株式会社 | YD Electrical Inc.">
+    <Header />
+
+    <main>
+        <div class="relative h-[500px] md:h-[875px] flex items-center justify-center text-center px-4 bg-gray-900">
+            <img src="/images/33166124_m_2.jpg" alt="Electrical Work Site" class="absolute inset-0 w-full h-full object-cover object-bottom opacity-50">
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight drop-shadow-md">
+                    社会と暮らしに<br class="md:hidden">優しい電気を。
+                </h1>
+                <p class="text-gray-100 text-lg md:text-xl mb-10 font-medium drop-shadow-md">
+                    ビル・商業施設の電気設備工事なら優伸電設。<br>
+                    見えない場所から、都市の安全を支えています。
+                </p>
+                <a href="#company" class="inline-block border-2 border-white text-white px-8 py-3 rounded font-bold hover:bg-white hover:text-primary-900 transition">
+                    会社案内を見る
+                </a>
+            </div>
+        </div>
+
+        <section id="about" class="py-20 px-4 max-w-screen-xl mx-auto md:flex md:gap-16 items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <span class="text-primary font-bold tracking-widest text-xl uppercase border-b-2 border-primary pb-1">About Us</span>
+                <h2 class="text-3xl font-bold text-gray-800 mt-6 mb-6">地域社会のインフラを支え、<br>次世代へ技術を繋ぐ。</h2>
+                <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+                    私たちは、電気施工のプロフェッショナルとして、商業施設、病院、オフィス、公共施設など、多岐にわたる施工実績と確かな技術力を誇ります。 <br>
+                    「安全」「信頼」「品質」をモットーに、お客様の信頼にお応えいたします。 <br>
+                    基本に忠実に。堅牢な施工でお客様より信頼いただける仕事を。 
+                </p>
+                <div class="bg-primary-50 p-6 rounded-l border-l-4 border-primary shadow-sm">
+                    <p class="font-bold text-primary-900 text-lg mb-2">代表メッセージ</p>
+                    <p class="italic text-gray-700 font-medium">
+                        優伸電設株式会社のホームページにお越しくださいましてありがとうございます。 <br>
+                        事業に対して常に真剣に取り組み、顧客だけではなくあらゆる状況の中で『信用』と『安全』を第一に日々品質向上に取り組んでおります。<br>
+                        一人一人を大切にし、個性を力に変え、個人も会社も得意を増やし成長することを目指しております。 <br>
+                        コンパクトな組織の中でも適材適所でお客様のご要望に応えるべく日々努力をしております。 <br>
+                        <br>
+                        今後一層のご支援・ご協力を賜りますよう宜しくお願いします。 </p>
+                    <p class="text-right text-lg text-gray-500 mt-2">代表取締役社長：藤原　優地</p>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" alt="Meeting" class="rounded shadow-lg object-cover h-80 w-full">
+            </div>
+        </section>
+
+        <section id="history" class="py-20 px-4 bg-white border-t border-gray-100">
+            <div class="max-w-screen-md mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">沿革</h2>
+                    <span class="text-sm text-gray-500 tracking-widest uppercase">HISTORY</span>
+                </div>
+
+                <div class="border-l-4 border-gray-200 ml-4 md:ml-8 pl-8 md:pl-12 space-y-12">
+                    <div class="relative">
+                        <div class="absolute -left-[42px] md:-left-[58px] top-1 w-6 h-6 rounded-full bg-primary border-4 border-white shadow-sm"></div>
+                        <p class="text-sm text-gray-500 font-bold mb-1">2024年 1月</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">優伸電設株式会社 設立</h3>
+                        <p class="text-gray-600">東京都三鷹市にて設立。</p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[42px] md:-left-[58px] top-1 w-6 h-6 rounded-full bg-primary border-4 border-white shadow-sm"></div>
+                        <p class="text-sm text-gray-500 font-bold mb-1">2024年 3月</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">建設業許可 取得</h3>
+                        <p class="text-gray-600">東京都知事許可（般-5）第158350号（電気工事業）を取得し、事業を本格化。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="bg-gray-50 py-20 px-4 border-y border-gray-200">
+            <div class="max-w-screen-xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800">施工実績</h2>
+                    <p class="text-gray-500 mt-2">Works</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-8 rounded shadow-lg border border-gray-100 border-t-4 border-t-primary">
+                        <div class="w-14 h-14 bg-gray-50 rounded-full flex items-center justify-center text-primary shadow-sm mb-6 mx-auto">
+                            <span class="material-icons-round text-3xl">apartment</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-center">オフィスビル新築工事</h3>
+                        <p class="text-sm text-gray-500 mb-4 text-center">都内某所</p>
+                        <hr class="border-gray-100 my-4">
+                        <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                            <li>受変電設備設置</li>
+                            <li>幹線動力工事</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 rounded shadow-lg border border-gray-100 border-t-4 border-t-primary">
+                        <div class="w-14 h-14 bg-gray-50 rounded-full flex items-center justify-center text-primary shadow-sm mb-6 mx-auto">
+                            <span class="material-icons-round text-3xl">storefront</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-center">商業施設改修工事</h3>
+                        <p class="text-sm text-gray-500 mb-4 text-center">神奈川県</p>
+                        <hr class="border-gray-100 my-4">
+                        <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                            <li>電灯コンセント工事</li>
+                            <li>LED化工事</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 rounded shadow-lg border border-gray-100 border-t-4 border-t-primary">
+                        <div class="w-14 h-14 bg-gray-50 rounded-full flex items-center justify-center text-primary shadow-sm mb-6 mx-auto">
+                            <span class="material-icons-round text-3xl">school</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-center">公共施設電気設備工事</h3>
+                        <p class="text-sm text-gray-500 mb-4 text-center">埼玉県</p>
+                        <hr class="border-gray-100 my-4">
+                        <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                            <li>公共案件対応</li>
+                            <li>各種配線工事</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <WorksModal client:load />
+            </div>
+        </section>
+
+        <section id="company" class="py-20 px-4 bg-white">
+            <div class="max-w-screen-lg mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">会社概要</h2>
+                    <span class="text-sm text-gray-500 tracking-widest uppercase">CORPORATE PROFILE</span>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+                    <dl class="divide-y divide-gray-200">
+                        <div class="flex flex-col md:flex-row p-6">
+                            <dt class="w-full md:w-1/4 font-bold text-gray-600 mb-2 md:mb-0">会社名</dt>
+                            <dd class="w-full md:w-3/4 font-bold text-gray-800">優伸電設株式会社</dd>
+                        </div>
+                        <div class="flex flex-col md:flex-row p-6 bg-gray-50/50">
+                            <dt class="w-full md:w-1/4 font-bold text-gray-600 mb-2 md:mb-0">代表者</dt>
+                            <dd class="w-full md:w-3/4 text-gray-800">代表取締役　藤原 優地</dd>
+                        </div>
+                        <div class="flex flex-col md:flex-row p-6">
+                            <dt class="w-full md:w-1/4 font-bold text-gray-600 mb-2 md:mb-0">所在地</dt>
+                            <dd class="w-full md:w-3/4 text-gray-800">
+                                〒181-0003<br>
+                                東京都三鷹市北野1-1-9-101<br>
+                                <span class="text-sm text-gray-500 mt-1 block">TEL: 0422-26-5124 / FAX: 0422-24-9971</span>
+                            </dd>
+                        </div>
+                        <div class="flex flex-col md:flex-row p-6 bg-gray-50/50">
+                            <dt class="w-full md:w-1/4 font-bold text-gray-600 mb-2 md:mb-0">設立</dt>
+                            <dd class="w-full md:w-3/4 text-gray-800">2024年1月29日</dd>
+                        </div>
+                        <div class="flex flex-col md:flex-row p-6">
+                            <dt class="w-full md:w-1/4 font-bold text-gray-600 mb-2 md:mb-0">資本金</dt>
+                            <dd class="w-full md:w-3/4 text-gray-800">5,000,000円</dd>
+                        </div>
+                        <div class="flex flex-col md:flex-row p-6 bg-gray-50/50">
+                            <dt class="w-full md:w-1/4 font-bold text-gray-600 mb-2 md:mb-0">従業員数</dt>
+                            <dd class="w-full md:w-3/4 text-gray-800">12名(2026年1月現在)</dd>
+                        </div>
+                        <div class="flex flex-col md:flex-row p-6">
+                            <dt class="w-full md:w-1/4 font-bold text-gray-600 mb-2 md:mb-0">事業内容</dt>
+                            <dd class="w-full md:w-3/4 text-gray-800">
+                                受変電設備工事、幹線動力工事、電灯コンセント工事他、電気設備工事全般
+                            </dd>
+                        </div>
+                        <div class="flex flex-col md:flex-row p-6 bg-gray-50/50">
+                            <dt class="w-full md:w-1/4 font-bold text-gray-600 mb-2 md:mb-0">建設業許可</dt>
+                            <dd class="w-full md:w-3/4 text-gray-800">東京都知事許可(般-5)第158350号 電気工事業</dd>
+                        </div>
+                        <div class="flex flex-col md:flex-row p-6">
+                            <dt class="w-full md:w-1/4 font-bold text-gray-600 mb-2 md:mb-0">主な取引銀行</dt>
+                            <dd class="w-full md:w-3/4 text-gray-800">三菱UFJ銀行、多摩信用金庫</dd>
+                        </div>
+                        <div class="flex flex-col md:flex-row p-6 bg-gray-50/50">
+                            <dt class="w-full md:w-1/4 font-bold text-gray-600 mb-2 md:mb-0">福利厚生</dt>
+                            <dd class="w-full md:w-3/4 text-gray-800">厚生年金・社会保険・雇用保険 労災他各種制度有</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section id="partners" class="pb-20 px-4 bg-white">
+            <div class="max-w-screen-xl mx-auto border-t border-gray-100 pt-10">
+                <p class="text-center text-sm text-gray-500 font-bold mb-8">主な取引先（順不同・敬称略）</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-gray-50 border border-gray-200 h-20 flex items-center justify-center rounded text-gray-600 font-bold text-sm shadow-sm hover:shadow-md transition">株式会社トラスト・ウィッシュ</div>
+                    <div class="bg-gray-50 border border-gray-200 h-20 flex items-center justify-center rounded text-gray-600 font-bold text-sm shadow-sm hover:shadow-md transition">株式会社善一電設</div>
+                    <div class="bg-gray-50 border border-gray-200 h-20 flex items-center justify-center rounded text-gray-600 font-bold text-sm shadow-sm hover:shadow-md transition">株式会社三明電気工事</div>
+                    <div class="bg-gray-50 border border-gray-200 h-20 flex items-center justify-center rounded text-gray-600 font-bold text-sm shadow-sm hover:shadow-md transition">株式会社第一建工</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
 </Layout>

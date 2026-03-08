@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="お問い合わせ | 優伸電設株式会社">
+    <header class="border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-screen-xl mx-auto px-4 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <a href="/" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <img src="/images/YUDENロゴ_2_1_ol.png" alt="YD" class="h-8" onerror="this.style.display='none';this.insertAdjacentHTML('afterend', '<span class=\'font-black text-2xl text-primary-900\'>YD</span>')">
+                    <span class="text-xs md:text-sm text-gray-600 font-medium">優伸電設株式会社</span>
+                </a>
+            </div>
+            <a href="/" class="bg-gray-100 text-gray-600 text-sm font-bold px-5 py-2.5 rounded hover:bg-gray-200 transition flex items-center gap-1">
+                <span class="material-icons-round text-sm">arrow_back</span> TOPへ戻る
+            </a>
+        </div>
+    </header>
+
+    <div class="bg-primary-900 py-12 text-center text-white">
+        <h1 class="text-3xl font-bold mb-2">お問い合わせ</h1>
+        <p class="text-primary-50 text-sm tracking-widest">CONTACT</p>
+    </div>
+
+    <main class="flex-grow py-16 px-4">
+        <div class="max-w-screen-lg mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b-4 border-primary inline-block pb-1">
+                        お電話でのお問い合わせ
+                    </h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        お急ぎの方や、フォーム入力が面倒な方は、お気軽にお電話ください。<br>
+                        「ホームページを見た」とお伝えいただけるとスムーズです。
+                    </p>
+                    <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-200 text-center mb-8">
+                        <p class="text-sm text-gray-500 font-bold mb-2">TEL</p>
+                        <a href="tel:0422265124" class="text-3xl md:text-4xl font-bold text-primary hover:text-accent transition block mb-2">
+                            0422-26-5124
+                        </a>
+                        <p class="text-sm text-gray-400">受付時間 8:00〜17:00（日・祝除く）</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded text-sm text-gray-600">
+                        <p class="font-bold mb-2">FAXでのお問い合わせ</p>
+                        <p class="text-lg font-bold">0422-24-9971</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b-4 border-primary inline-block pb-1">
+                        メールフォーム
+                    </h2>
+                    <p class="text-gray-600 mb-8 text-sm">
+                        以下のフォームに必要事項をご入力の上、「送信する」ボタンを押してください。<br>
+                        内容を確認次第、担当者より折り返しご連絡させていただきます。
+                    </p>
+
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('これはデモ画面です。実際には送信されません。');">
+                        <div>
+                            <label for="name" class="block text-sm font-bold text-gray-700 mb-2">お名前 <span class="text-red-500">*</span></label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" placeholder="例：優伸 太郎" />
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-bold text-gray-700 mb-2">貴社名</label>
+                            <input type="text" id="company" name="company" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" placeholder="例：株式会社〇〇工務店" />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-bold text-gray-700 mb-2">メールアドレス <span class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" placeholder="例：info@yuden.co.jp" />
+                        </div>
+                        <div>
+                            <label for="tel" class="block text-sm font-bold text-gray-700 mb-2">電話番号</label>
+                            <input type="tel" id="tel" name="tel" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" placeholder="例：090-1234-5678" />
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-bold text-gray-700 mb-2">お問い合わせ内容 <span class="text-red-500">*</span></label>
+                            <textarea id="message" name="message" required rows="5" class="w-full px-4 py-3 rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" placeholder="ご用件をご記入ください"></textarea>
+                        </div>
+                        <div class="pt-4">
+                            <button type="submit" class="w-full bg-primary text-white font-bold py-4 rounded shadow-lg hover:bg-primary-900 transition flex items-center justify-center gap-2">
+                                <span class="material-icons-round">send</span>
+                                送信する
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+</Layout>

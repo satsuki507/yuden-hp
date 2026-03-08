@@ -1,0 +1,22 @@
+/* v4専用の読み込み方 */
+@import "tailwindcss";
+
+/* ここで独自のテーマ（色やフォント）を設定します */
+@theme {
+    --color-primary: #3e8ed0;
+    --color-primary-50: #ebf5ff;
+    --color-primary-900: #1b5e9e;
+
+    --color-accent: #ff9900;
+    --color-accent-hover: #e68a00;
+
+    --font-sans: "Noto Sans JP", sans-serif;
+}
+
+/* 共通のカスタムCSS */
+html {
+    scroll-behavior: smooth;
+}
+body.modal-open {
+    overflow: hidden;
+}

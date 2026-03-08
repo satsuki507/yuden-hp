@@ -1,23 +1,36 @@
+---
+import '../styles/global.css';
+
+// ここはサーバー側で動くJS/TSエリア
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "東京都三鷹市の電気設備工事会社、優伸電設株式会社の公式サイトです。" } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="ja" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 	</head>
-	<body>
+	<body class="font-sans bg-gray-50 text-gray-800 relative pb-20 md:pb-0">
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+<style is:global>
+	/* 全ページ共通のCSSがあればここに書く */
+	body.modal-open {
+		overflow: hidden;
 	}
 </style>
