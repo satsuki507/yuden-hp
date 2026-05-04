@@ -1,5 +1,18 @@
 import { useState, useEffect } from "react";
 
+/**
+ * @typedef {Object} Work
+ * @property {string} id
+ * @property {string} title
+ * @property {string} location
+ * @property {string} details
+ * @property {{url: string}} [icon]
+ */
+
+/**
+ * @param {{ works: Work[] }} props  // ★ここが重要！worksはWork型の配列だと教える
+ */
+
 // ★ propsとして works（MicroCMSのデータ）を受け取る
 export default function WorksModal({ works = [] }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +31,7 @@ export default function WorksModal({ works = [] }) {
             <div className='text-center mt-12'>
                 <button
                     onClick={() => setIsOpen(true)}
-                    className='inline-flex items-center gap-2 border border-gray-300 text-gray-600 px-8 py-3 rounded-full hover:bg-gray-50 hover:text-primary transition font-bold cursor-pointer'
+                    className='inline-flex items-center gap-2 border border-gray-300 text-gray-600 px-8 py-3 rounded-full hover:bg-gray-50 hover:text-white transition font-bold cursor-pointer'
                 >
                     <span className='material-icons-round text-sm'>list</span>
                     実績一覧を見る
@@ -48,28 +61,42 @@ export default function WorksModal({ works = [] }) {
                         </div>
 
                         <div className='flex-1 overflow-y-auto p-6 md:p-10'>
-                            <div className='grid md:grid-cols-3 gap-6'>
+                            <div className='grid md:grid-cols-3 gap-8'>
+                                {" "}
+                                {/* gapを広く */}
                                 {/* ★ MicroCMSのデータをループ（map）して表示 */}
                                 {works.map((work) => (
+                                    // ★ デザイン変更: rounded-2xl, flex-col, overflow-hidden
                                     <div
                                         key={work.id}
-                                        className='bg-white p-8 rounded shadow-lg border border-gray-100 border-t-4 border-t-primary'
+                                        className='bg-white rounded-2xl shadow-xl border border-gray-100 border-t-4 border-t-light overflow-hidden flex flex-col'
                                     >
-                                        <div className='w-14 h-14 bg-gray-50 rounded-full flex items-center justify-center text-primary shadow-sm mb-6 mx-auto'>
-                                            {/* アイコンが空の場合はデフォルトで 'work' を表示 */}
-                                            <span className='material-icons-round text-3xl'>{work.icon || "work"}</span>
+                                        {/* ★ 画像エリア: React用 */}
+                                        <div className='p-3 pb-0'>
+                                            {work.icon && work.icon.url ? (
+                                                <img
+                                                    src={work.icon.url}
+                                                    alt={work.title}
+                                                    className='w-full aspect-[4/3] object-cover rounded-xl shadow-sm'
+                                                />
+                                            ) : (
+                                                <div className='w-full aspect-[4/3] bg-gray-50 rounded-xl flex items-center justify-center text-gray-300 shadow-inner'>
+                                                    <span className='material-icons-round text-5xl'>image</span>
+                                                </div>
+                                            )}
                                         </div>
-                                        <h3 className='font-bold text-2xl mb-2 text-center'>{work.title}</h3>
-                                        <p className='text-base text-gray-500 mb-4 text-center'>{work.location}</p>
-                                        <hr className='border-gray-100 my-4' />
-                                        <ul className='text-lg text-gray-600 list-disc list-inside space-y-1'>
-                                            {/* details（工事内容）を改行ごとに分割して <li> で表示 */}
-                                            {work.details &&
-                                                work.details.split("\n").map((item, index) => {
-                                                    if (!item.trim()) return null; // 空行は無視
-                                                    return <li key={index}>{item}</li>;
-                                                })}
-                                        </ul>
+
+                                        {/* ★ テキストエリア */}
+                                        <div className='p-6 md:p-8 text-center flex-grow'>
+                                            <h3 className='font-bold text-2xl mb-2 text-gray-800'>{work.title}</h3>
+                                            <p className='text-base text-gray-500 mb-4'>{work.location}</p>
+                                            <hr className='border-gray-100 my-4' />
+                                            <ul className='text-lg text-gray-600 list-disc list-inside space-y-1'>
+                                                {work.details
+                                                    ?.split("\n")
+                                                    .map((item, i) => item.trim() && <li key={i}>{item}</li>)}
+                                            </ul>
+                                        </div>
                                     </div>
                                 ))}
                             </div>
