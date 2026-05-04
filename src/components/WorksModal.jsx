@@ -33,7 +33,6 @@ export default function WorksModal({ works = [] }) {
                     onClick={() => setIsOpen(true)}
                     className='inline-flex items-center gap-2 border border-gray-300 text-gray-600 px-8 py-3 rounded-full hover:bg-gray-50 hover:text-white transition font-bold cursor-pointer'
                 >
-                    <span className='material-icons-round text-sm'>list</span>
                     実績一覧を見る
                 </button>
             </div>
@@ -47,10 +46,7 @@ export default function WorksModal({ works = [] }) {
 
                     <div className='absolute inset-x-0 bottom-0 top-10 md:inset-10 md:max-w-screen-xl md:mx-auto bg-gray-50 rounded-t-xl md:rounded-xl shadow-2xl flex flex-col transform transition-all'>
                         <div className='flex justify-between items-center p-6 bg-white border-b border-gray-200 rounded-t-xl'>
-                            <h3 className='text-xl font-bold text-gray-800 flex items-center gap-2'>
-                                <span className='material-icons-round text-primary'>list</span>
-                                施工実績一覧
-                            </h3>
+                            <h3 className='text-xl font-bold text-gray-800 flex items-center gap-2'>施工実績一覧</h3>
                             <button
                                 type='button'
                                 onClick={() => setIsOpen(false)}

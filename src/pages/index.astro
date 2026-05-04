@@ -35,7 +35,7 @@ const worksData: Work[] = response.contents;
     <Header />
 
     <main>
-        <div class="relative h-[500px] md:h-[875px] flex items-center justify-center text-center px-4 bg-gray-900">
+        <div class="relative h-[500px] md:h-[875px] flex items-center justify-center text-center px-3 bg-gray-900">
             <img src="/images/33166124_m_2.jpg" alt="Electrical Work Site" class="absolute inset-0 w-full h-full object-cover object-bottom opacity-50">
             <div class="relative z-10 max-w-4xl mx-auto">
                 <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight drop-shadow-md">
@@ -73,7 +73,7 @@ const worksData: Work[] = response.contents;
                 </div>
             </div>
             <div class="md:w-1/2">
-                <img src="/images/yuden-image-meeting.jpg" alt="Meeting" class="rounded shadow-lg object-cover h-80 w-full object-top">
+                <img src="/images/yuden-image-meeting.jpg" alt="Meeting" class="rounded shadow-lg object-cover h-72 w-full object-[50%_25%]">
             </div>
         </section>
 
@@ -102,7 +102,7 @@ const worksData: Work[] = response.contents;
             </div>
         </section>
 
-<section id="works" class="bg-gray-50 py-30 px-4 border-y border-gray-200">
+        <section id="works" class="bg-gray-50 py-30 px-4 border-y border-gray-200">
             <div class="max-w-screen-xl mx-auto">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold text-gray-800">施工実績</h2>
@@ -148,8 +148,13 @@ const worksData: Work[] = response.contents;
             </div>
         </section>
 
-        <section id="company" class="py-30 px-4 bg-white">
-            <div class="max-w-screen-lg mx-auto">
+        <section id="company" class="py-30 px-4 bg-white relative">
+            <div 
+                class="absolute inset-0 bg-[url(/images/33936690_m.jpg)] bg-cover bg-center mask-t-from-40% opacity-70" 
+                aria-hidden="true"
+            ></div>
+
+            <div class="max-w-screen-lg mx-auto relative z-10">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl font-bold text-gray-800 mb-2">会社概要</h2>
                     <span class="text-sm text-gray-500 tracking-widest uppercase">CORPORATE PROFILE</span>
@@ -212,10 +217,10 @@ const worksData: Work[] = response.contents;
             <div class="max-w-screen-xl mx-auto border-t border-gray-100 pt-10">
                 <p class="text-center text-2xl text-gray-500 font-bold mb-8">主な取引先（順不同・敬称略）</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <div class="bg-gray-50 border border-gray-200 h-20 flex items-center justify-center rounded text-gray-600 font-bold text-lg shadow-sm hover:shadow-md transition">株式会社トラスト・ウィッシュ</div>
-                    <div class="bg-gray-50 border border-gray-200 h-20 flex items-center justify-center rounded text-gray-600 font-bold text-lg shadow-sm hover:shadow-md transition">株式会社善一電設</div>
-                    <div class="bg-gray-50 border border-gray-200 h-20 flex items-center justify-center rounded text-gray-600 font-bold text-lg shadow-sm hover:shadow-md transition">株式会社三明電気工事</div>
-                    <div class="bg-gray-50 border border-gray-200 h-20 flex items-center justify-center rounded text-gray-600 font-bold text-lg shadow-sm hover:shadow-md transition">株式会社第一建工</div>
+                    <a href="https://www.trustwish.co.jp/" class="bg-gray-50 border border-gray-200 h-20 flex items-center justify-center rounded text-gray-600 font-bold text-lg shadow-sm hover:shadow-md transition" target="_blank" rel="noopener noreferrer">株式会社トラスト・ウィッシュ</a>
+                    <a href="https://www.kensetumap.com/company/580034/" class="bg-gray-50 border border-gray-200 h-20 flex items-center justify-center rounded text-gray-600 font-bold text-lg shadow-sm hover:shadow-md transition" target="_blank" rel="noopener noreferrer">株式会社善一電設</a>
+                    <a href="https://www.sanmei.biz/" class="bg-gray-50 border border-gray-200 h-20 flex items-center justify-center rounded text-gray-600 font-bold text-lg shadow-sm hover:shadow-md transition" target="_blank" rel="noopener noreferrer">株式会社三明電気工事</a>
+                    <a href="https://daiichi-kenko.com/" class="bg-gray-50 border border-gray-200 h-20 flex items-center justify-center rounded text-gray-600 font-bold text-lg shadow-sm hover:shadow-md transition" target="_blank" rel="noopener noreferrer">株式会社第一建工</a>
                 </div>
             </div>
         </section>
