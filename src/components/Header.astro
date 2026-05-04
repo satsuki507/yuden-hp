@@ -9,14 +9,66 @@
             </a>
         </div>
         
-        <nav class="hidden md:flex gap-6 text-xl font-bold text-gray-600">
+        <nav class="hidden md:flex gap-6 items-center font-bold text-xl text-gray-600">
             <a href="/#about" class="hover:text-primary transition">私たちについて</a>
             <a href="/#history" class="hover:text-primary transition">沿革</a>
             <a href="/#works" class="hover:text-primary transition">施工実績</a>
             <a href="/#company" class="hover:text-primary transition">会社概要</a>
         </nav>
-        
-        <a href="/contact" class="hidden md:block bg-primary text-white text-base font-bold px-5 py-2.5 rounded hover:bg-primary-900 transition">お問い合わせ</a>
-        <div class="md:hidden text-2xl text-gray-600 cursor-pointer p-2">≡</div>
+
+        <a href="/contact" class="hidden md:flex bg-primary text-white text-base font-bold px-5 py-2.5 rounded hover:bg-primary-900 transition items-center h-11 gap-1 shadow-sm">
+            <span class="material-icons-round text-sm">mail</span> お問い合わせ
+        </a>
+
+        <button id="hamburger-btn" class="md:hidden text-gray-600 p-2 focus:outline-none hover:bg-gray-100 rounded transition cursor-pointer">
+            <span id="hamburger-icon" class="material-icons-round text-3xl">menu</span>
+        </button>
     </div>
+
+    <nav id="mobile-menu" class="md:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-200 shadow-lg hidden flex-col">
+        <a href="/#about" class="mobile-link block py-4 px-6 text-gray-600 font-bold border-b border-gray-100 hover:bg-gray-50 transition">私たちについて</a>
+        <a href="/#history" class="mobile-link block py-4 px-6 text-gray-600 font-bold border-b border-gray-100 hover:bg-gray-50 transition">沿革</a>
+        <a href="/#works" class="mobile-link block py-4 px-6 text-gray-600 font-bold border-b border-gray-100 hover:bg-gray-50 transition">施工実績</a>
+        <a href="/#company" class="mobile-link block py-4 px-6 text-gray-600 font-bold border-b border-gray-100 hover:bg-gray-50 transition">会社概要</a>
+        <a href="/contact" class="mobile-link block py-4 px-6 text-primary font-bold hover:bg-primary-50 transition flex items-center gap-2">
+            <span class="material-icons-round text-sm">mail</span> お問い合わせ
+        </a>
+    </nav>
 </header>
+
+<script>
+    // ページが読み込まれた時に実行
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // 要素が存在するか確認してから処理を追加
+        if (hamburgerBtn && mobileMenu && hamburgerIcon) {
+            
+            // ハンバーガーボタンをクリックした時の処理
+            hamburgerBtn.addEventListener('click', () => {
+                // メニューの表示/非表示を切り替え（hiddenクラスの付け外し）
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+                
+                // アイコンを「三(menu)」と「×(close)」で切り替え
+                if (mobileMenu.classList.contains('hidden')) {
+                    hamburgerIcon.textContent = 'menu';
+                } else {
+                    hamburgerIcon.textContent = 'close';
+                }
+            });
+
+            // メニュー内のリンクをクリックした時に自動でメニューを閉じる処理
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex');
+                    hamburgerIcon.textContent = 'menu';
+                });
+            });
+        }
+    });
+</script>
