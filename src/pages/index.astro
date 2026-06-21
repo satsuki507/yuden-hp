@@ -54,6 +54,8 @@ const worksData: Work[] = response.contents;
         <section id="about" class="py-20 px-4 ">
             <div class="max-w-screen-xl mx-auto">
 
+                <div class="bg-amber-500 font-bold text-5xl mt-20 mb-10">パターン１</div>
+
                 <!-- 
                 メインのグリッドレイアウト
                 スマホ(デフォルト): 1列 (grid-cols-1)
@@ -73,7 +75,7 @@ const worksData: Work[] = response.contents;
 
                     <!-- ② 画像① (PC:右上 / SP:2番目) -->
                     <div>
-                        <img src="/images/AboutUs_1.jpg" alt="会社風景" class="w-full h-auto rounded-xl shadow-lg object-cover aspect-video">
+                        <img src="/images/AboutUs_6.jpg" alt="実績" class="w-full h-auto rounded-xl shadow-lg object-cover aspect-video">
                     </div>
 
                     <!-- ③ 代表メッセージ (PC:左下 / SP:3番目) -->
@@ -95,14 +97,173 @@ const worksData: Work[] = response.contents;
                     <!-- スマホ(デフォルト): 2列(横並び) / PC(md:): 1列(縦並び) にして隙間(gap)をあける -->
                     <div class="grid grid-cols-2 gap-4 h-full">
                         <img 
-                            src="/images/AboutUs_2.jpg" 
+                            src="/images/AboutUs_5-1.jpg" 
                             alt="作業風景1" 
                             class="w-full h-full rounded-xl shadow-md object-cover aspect-[9/16] md:aspect-auto"
                         >
                         <img
-                            src="/images/AboutUs_3.jpg"
+                            src="/images/AboutUs_4-1.jpg"
                             alt="作業風景2"
-                            class="w-full h-full rounded-xl shadow-md object-cover aspect-[9/16] md:aspect-auto contrast-125 saturate-50">
+                            class="w-full h-full rounded-xl shadow-md object-cover aspect-[9/16] md:aspect-auto">
+                    </div>
+
+                </div>
+
+                <div class="bg-amber-500 font-bold text-5xl mt-20 mb-10">パターン２</div>
+
+                <!-- 
+                メインのグリッドレイアウト
+                スマホ(デフォルト): 1列 (grid-cols-1)
+                PC(md:): 2列 (grid-cols-2) 
+                -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    
+                    <!-- ① 案内文 (PC:左上 / SP:1番目) -->
+                    <div class="flex flex-col justify-center">
+                        <h2 class="text-3xl font-bold text-gray-800 mt-6 mb-6">会社案内</h2>
+                        <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+                            私たちは、電気施工のプロフェッショナルとして、商業施設、病院、オフィス、公共施設など、多岐にわたる施工実績と確かな技術力を誇ります。 <br>
+                            「安全」「信頼」「品質」をモットーに、お客様の信頼にお応えいたします。 <br>
+                            基本に忠実に。堅牢な施工でお客様より信頼いただける仕事を。 
+                        </p>
+                    </div>
+
+                    <!-- ② 画像① (PC:右上 / SP:2番目) -->
+                    <div>
+                        <img src="/images/AboutUs_6.jpg" alt="実績" class="w-full h-auto rounded-xl shadow-lg object-cover aspect-video">
+                    </div>
+
+                    <!-- ③ 代表メッセージ (PC:左下 / SP:3番目) -->
+                    <div class="flex flex-col justify-center">
+                        <div class="bg-primary-50 p-6 rounded-l border-l-4 border-primary shadow-sm">
+                            <p class="font-bold text-primary-900 text-xl mb-2">代表メッセージ</p>
+                            <p class="italic text-gray-700 font-medium text-lg">
+                                優伸電設株式会社のホームページにお越しくださいましてありがとうございます。 <br>
+                                事業に対して常に真剣に取り組み、顧客だけではなくあらゆる状況の中で『信用』と『安全』を第一に日々品質向上に取り組んでおります。<br>
+                                一人一人を大切にし、個性を力に変え、個人も会社も得意を増やし成長することを目指しております。 <br>
+                                コンパクトな組織の中でも適材適所でお客様のご要望に応えるべく日々努力をしております。 <br>
+                                <br>
+                                今後一層のご支援・ご協力を賜りますよう宜しくお願いします。 </p>
+                            <p class="text-right text-lg text-gray-500 mt-2">代表取締役社長：藤原　優地</p>
+                        </div>
+                    </div>
+
+                    <!-- ④ 画像②・画像③ (PC:右下 / SP:4番目) -->
+                    <!-- スマホ(デフォルト): 2列(横並び) / PC(md:): 1列(縦並び) にして隙間(gap)をあける -->
+                    <div class="grid grid-cols-2 gap-4 h-full">
+                        <img 
+                            src="/images/AboutUs_5-2.jpg" 
+                            alt="作業風景1" 
+                            class="w-full h-full rounded-xl shadow-md object-cover aspect-[9/16] md:aspect-auto"
+                        >
+                        <img
+                            src="/images/AboutUs_4-2.jpg"
+                            alt="作業風景2"
+                            class="w-full h-full rounded-xl shadow-md object-cover aspect-[9/16] md:aspect-auto">
+                    </div>
+
+                </div>
+
+                
+
+                <div class="bg-amber-500 font-bold text-5xl mt-20 mb-10">パターン３</div>
+
+                <!-- 
+                メインのグリッドレイアウト
+                スマホ(デフォルト): 1列 (grid-cols-1)
+                PC(md:): 2列 (grid-cols-2) 
+                -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    
+                    <!-- ① 案内文 (PC:左上 / SP:1番目) -->
+                    <div class="flex flex-col justify-center">
+                        <h2 class="text-3xl font-bold text-gray-800 mt-6 mb-6">会社案内</h2>
+                        <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+                            私たちは、電気施工のプロフェッショナルとして、商業施設、病院、オフィス、公共施設など、多岐にわたる施工実績と確かな技術力を誇ります。 <br>
+                            「安全」「信頼」「品質」をモットーに、お客様の信頼にお応えいたします。 <br>
+                            基本に忠実に。堅牢な施工でお客様より信頼いただける仕事を。 
+                        </p>
+                    </div>
+
+                    <!-- ② 画像① (PC:右上 / SP:2番目) -->
+                    <div>
+                        <img src="/images/AboutUs_1.jpg" alt="実績" class="w-full h-auto rounded-xl shadow-lg object-cover aspect-video">
+                    </div>
+
+                    <!-- ③ 代表メッセージ (PC:左下 / SP:3番目) -->
+                    <div class="flex flex-col justify-center">
+                        <div class="bg-primary-50 p-6 rounded-l border-l-4 border-primary shadow-sm">
+                            <p class="font-bold text-primary-900 text-xl mb-2">代表メッセージ</p>
+                            <p class="italic text-gray-700 font-medium text-lg">
+                                優伸電設株式会社のホームページにお越しくださいましてありがとうございます。 <br>
+                                事業に対して常に真剣に取り組み、顧客だけではなくあらゆる状況の中で『信用』と『安全』を第一に日々品質向上に取り組んでおります。<br>
+                                一人一人を大切にし、個性を力に変え、個人も会社も得意を増やし成長することを目指しております。 <br>
+                                コンパクトな組織の中でも適材適所でお客様のご要望に応えるべく日々努力をしております。 <br>
+                                <br>
+                                今後一層のご支援・ご協力を賜りますよう宜しくお願いします。 </p>
+                            <p class="text-right text-lg text-gray-500 mt-2">代表取締役社長：藤原　優地</p>
+                        </div>
+                    </div>
+
+                    <!-- ④ 画像②・画像③ (PC:右下 / SP:4番目) -->
+                    <!-- スマホ(デフォルト): 2列(横並び) / PC(md:): 1列(縦並び) にして隙間(gap)をあける -->
+                    <div class="grid grid-cols-1 gap-4 h-full">
+                        <img 
+                            src="/images/AboutUs_5-4.jpg" 
+                            alt="作業風景1" 
+                            class="w-full h-full rounded-xl shadow-md object-cover aspect-[9/16] md:aspect-auto"
+                        >
+                    </div>
+
+                </div>
+
+                <div class="bg-amber-500 font-bold text-5xl mt-20 mb-10">パターン４</div>
+
+                <!-- 
+                メインのグリッドレイアウト
+                スマホ(デフォルト): 1列 (grid-cols-1)
+                PC(md:): 2列 (grid-cols-2) 
+                -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    
+                    <!-- ① 案内文 (PC:左上 / SP:1番目) -->
+                    <div class="flex flex-col justify-center">
+                        <h2 class="text-3xl font-bold text-gray-800 mt-6 mb-6">会社案内</h2>
+                        <p class="text-gray-600 leading-relaxed mb-8 text-lg">
+                            私たちは、電気施工のプロフェッショナルとして、商業施設、病院、オフィス、公共施設など、多岐にわたる施工実績と確かな技術力を誇ります。 <br>
+                            「安全」「信頼」「品質」をモットーに、お客様の信頼にお応えいたします。 <br>
+                            基本に忠実に。堅牢な施工でお客様より信頼いただける仕事を。 
+                        </p>
+                    </div>
+
+                    <!-- ② 画像① (PC:右上 / SP:2番目) -->
+                    <div>
+                        <img src="/images/AboutUs_1.jpg" alt="実績" class="w-full h-auto rounded-xl shadow-lg object-cover aspect-video">
+                    </div>
+
+                    <!-- ③ 代表メッセージ (PC:左下 / SP:3番目) -->
+                    <div class="flex flex-col justify-center">
+                        <div class="bg-primary-50 p-6 rounded-l border-l-4 border-primary shadow-sm">
+                            <p class="font-bold text-primary-900 text-xl mb-2">代表メッセージ</p>
+                            <p class="italic text-gray-700 font-medium text-lg">
+                                優伸電設株式会社のホームページにお越しくださいましてありがとうございます。 <br>
+                                事業に対して常に真剣に取り組み、顧客だけではなくあらゆる状況の中で『信用』と『安全』を第一に日々品質向上に取り組んでおります。<br>
+                                一人一人を大切にし、個性を力に変え、個人も会社も得意を増やし成長することを目指しております。 <br>
+                                コンパクトな組織の中でも適材適所でお客様のご要望に応えるべく日々努力をしております。 <br>
+                                <br>
+                                今後一層のご支援・ご協力を賜りますよう宜しくお願いします。 </p>
+                            <p class="text-right text-lg text-gray-500 mt-2">代表取締役社長：藤原　優地</p>
+                        </div>
+                    </div>
+
+                    <!-- ④ 画像②・画像③ (PC:右下 / SP:4番目) -->
+                    <!-- スマホ(デフォルト): 2列(横並び) / PC(md:): 1列(縦並び) にして隙間(gap)をあける -->
+                    <div class="grid grid-cols-1 gap-4 h-full">
+                        <img 
+                            src="/images/AboutUs_5-3.jpg" 
+                            alt="作業風景1" 
+                            class="w-full h-full rounded-xl shadow-md object-cover aspect-[9/16] md:aspect-auto"
+                        >
                     </div>
 
                 </div>
