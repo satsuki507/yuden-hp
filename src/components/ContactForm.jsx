@@ -216,7 +216,7 @@ export default function ContactForm() {
                         <br />
                         〒182-0035 東京都調布市上石原1-24-30 上石原ビル301号室
                         <br />
-                        TEL: 0424-52-8862
+                        TEL: 042-452-8862
                     </p>
                 </div>
             </div>
